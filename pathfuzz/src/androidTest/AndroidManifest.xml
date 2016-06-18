@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     package="kim.stkim1.pathfuzz"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="22"/>
+        android:minSdkVersion="9"
+        android:targetSdkVersion="24"/>
     <application>
         <uses-library android:name="android.test.runner"/>
     </application>
