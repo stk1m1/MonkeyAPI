@@ -1,9 +1,26 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        //maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        //classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        //classpath 'com.novoda:gradle-android-command-plugin:1.5.0'
+        //classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "24"
 
+    repositories {
+        maven { url 'http://repo1.maven.org/maven2' }
+    }
     defaultConfig {
         applicationId "kim.stk1m1.examples"
         minSdkVersion 23
@@ -23,4 +40,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
+
+    //classpath 'kim.stk1m1.pathfuzz:1.0'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
