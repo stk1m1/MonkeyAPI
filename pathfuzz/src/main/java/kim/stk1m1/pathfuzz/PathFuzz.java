@@ -24,12 +24,12 @@ public class PathFuzz extends Suite {
 
     public PathFuzz(Class<?> clazz) throws ParametersErrorException, InitializationError {
         super(clazz, Collections.<Runner>emptyList());
+
         // check if @paramters really exists
-        /*
         if(!clazz.isAnnotationPresent(Parameterized.Parameters.class)) {
             throw new ParametersErrorException( "@Parameters( TestDirectory, Prefix, Suffix = '.json', TestDirectoryRootPropertyName = ''");
         }
-        */
+
         log.debug("PathFuzz Constructed");
     }
 }
