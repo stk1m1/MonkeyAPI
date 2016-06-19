@@ -4,15 +4,29 @@ buildscript {
     repositories {
         jcenter()
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
-    }
+
+    dependencies {}
 }
 
-allprojects {
-    repositories {
-        jcenter()
-    }
+task assemblePathFuzz(type:GradleBuild) {
+    group = 'Build'
+    description = 'Assemble the PathFuzz'
+    buildFile = file('pathfuzz/build.gradle')
+    tasks = ['assemble']
+}
+
+task installPathFuzz(type:GradleBuild) {
+    group = 'Install'
+    description = 'Install the artifacts of PathFuzz into mavenLocal()'
+    buildFile = file('pathfuzz/build.gradle')
+    tasks = ['install']
+}
+
+task assemble {
+    group 'Build'
+    description = 'Build & install the PathFuzz'
+    dependsOn assemblePathFuzz
+    dependsOn installPathFuzz
 }
 
 task clean(type: Delete) {
