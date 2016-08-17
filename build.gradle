@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {}
+}
+
+task assemblePathFuzz(type:GradleBuild) {
+    group = 'Build'
+    description = 'Assemble the PathFuzz'
+    buildFile = file('pathfuzz/build.gradle')
+    tasks = ['assemble']
+}
+
+task installPathFuzz(type:GradleBuild) {
+    group = 'Install'
+    description = 'Install the artifacts of PathFuzz into mavenLocal()'
+    buildFile = file('pathfuzz/build.gradle')
+    tasks = ['install']
+}
+
+task assemble {
+    group 'Build'
+    description = 'Build & install the PathFuzz'
+    dependsOn assemblePathFuzz
+    dependsOn installPathFuzz
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
