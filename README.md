@@ -9,3 +9,10 @@ Testing Android API in randomized manner. Mozilla has done this to find out thei
 
 ### EvoSuite  
 - https://github.com/EvoSuite/evosuite  
+
+### Fuzzing in Go  
+- [Go Fuzzing](https://go.dev/security/fuzz/)  
+- [Design Draft: First Class Fuzzing](https://go.googlesource.com/proposal/+/master/design/draft-fuzzing.md)  
+- [testing: add fuzz test support](https://github.com/golang/go/issues/44551)  
+- [american fuzzy lop](https://lcamtuf.coredump.cx/afl/)  
+- [libFuzzer – a library for coverage-guided fuzz testing](https://llvm.org/docs/LibFuzzer.html)  
