@@ -7,6 +7,13 @@ Testing Android API in randomized manner. Mozilla has done this to find out thei
 - [Fuzzing with Code Fragments](https://www.st.cs.uni-saarland.de/publications/files/holler-usenix-2012.pdf)  
 - <https://www.youtube.com/watch?v=LDVfLX2KdVM>  
 
+### Fuzzing Tool & Lib  
+- [american fuzzy lop](https://lcamtuf.coredump.cx/afl/)  
+- [libFuzzer – a library for coverage-guided fuzz testing](https://llvm.org/docs/LibFuzzer.html)  
+- [OSS-Fuzz: Continuous Fuzzing for Open Source Software](https://github.com/google/oss-fuzz)  
+- [ClusterFuzz](https://google.github.io/clusterfuzz/)  
+- [ClusterFuzz (Github)](https://github.com/google/clusterfuzz)  
+
 ### EvoSuite  
 - https://github.com/EvoSuite/evosuite  
 
@@ -14,5 +21,5 @@ Testing Android API in randomized manner. Mozilla has done this to find out thei
 - [Go Fuzzing](https://go.dev/security/fuzz/)  
 - [Design Draft: First Class Fuzzing](https://go.googlesource.com/proposal/+/master/design/draft-fuzzing.md)  
 - [testing: add fuzz test support](https://github.com/golang/go/issues/44551)  
-- [american fuzzy lop](https://lcamtuf.coredump.cx/afl/)  
-- [libFuzzer – a library for coverage-guided fuzz testing](https://llvm.org/docs/LibFuzzer.html)  
+- [go-fuzz: randomized testing for Go](https://github.com/dvyukov/go-fuzz)  
+- [go-fuzz-action](https://github.com/jidicula/go-fuzz-action)  
